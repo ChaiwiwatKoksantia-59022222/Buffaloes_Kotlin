@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="demo">
+        <!--
+        <item>@drawable/???</item>
+        -->
+    </string-array>
+
+    <string-array name="tab3Text">
+        <item>โปรแกรม</item>
+        <item>อุปกรณ์</item>
+    </string-array>
+
+    <string-array name="tab3Image">
+
+        <item>@drawable/menu_inbox</item>
+        <item>@drawable/menu_microscope</item>
+    </string-array>
+
+    <string-array name="tab4Text">
+        <item>ขั้นตอน</item>
+        <item>ระยะเวลา</item>
+        <item>อุปกรณ์</item>
+    </string-array>
+
+    <string-array name="tab4Image">
+
+        <item>@drawable/menu_list</item>
+        <item>@drawable/menu_alarm</item>
+        <item>@drawable/menu_microscope</item>
+    </string-array>
+
+    <string-array name="tab5Text">
+        <item>คำศัพท์</item>
+        <item>พันธุ์กระบือ</item>
+        <item>การจัดการเลี้ยงดูกระบือ</item>
+        <item>โรคที่มักพบในกระบือ</item>
+        <item>ผู้จัดทำ</item>
+    </string-array>
+
+    <string-array name="tab5Image">
+
+        <item>@drawable/menu_translation</item>
+        <item>@drawable/menu_buffalo</item>
+        <item>@drawable/menu_feeding</item>
+        <item>@drawable/menu_virus</item>
+        <item>@drawable/menu_people</item>
+    </string-array>
+
+</resources>
