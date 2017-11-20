@@ -14,7 +14,7 @@ class TabSecondAdapter(val data: ArrayList<TabSecondListData>, val context: Cont
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): TabSecordViewHolder {
 
-        val v = LayoutInflater.from(parent?.context).inflate(R.layout.card_view_with_image, parent, false)
+        val v = LayoutInflater.from(parent?.context).inflate(R.layout.new_card_view_with_image, parent, false)
 
         return TabSecordViewHolder(v)
     }

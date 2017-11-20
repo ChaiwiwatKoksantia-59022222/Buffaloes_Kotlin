@@ -28,7 +28,12 @@
         <activity
             android:name=".MultiplyActivity"
             android:label="@string/title_activity_multiply"
-            android:theme="@style/AppTheme"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+
+
+
+        </activity>
     </application>
 
 </manifest>

@@ -34,7 +34,7 @@ class TabFourthFragment : Fragment() {
         showHideMore()
 
 
-        view.tab4_show_more_btn.setOnClickListener { view ->
+        view.tab4_show_more_btn.setOnClickListener {
             showHideMore()
         }
 
@@ -68,7 +68,7 @@ class TabFourthFragment : Fragment() {
 
             override fun onGlobalLayout() {
                 val obs = text.viewTreeObserver
-                obs.removeGlobalOnLayoutListener(this)
+                obs.removeOnGlobalLayoutListener(this)
                 if (text.lineCount > 3) {
                     val lineEndIndex = text.layout.getLineEnd(2)
                     val texts :String = text.text.subSequence(0, lineEndIndex - 3).toString() + " ..."

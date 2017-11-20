@@ -29,25 +29,54 @@ class TabFifthAdapter(val data: ArrayList<TabFifthListData>, val context: Contex
         holder?.image?.setImageBitmap(bitmap)
 
         holder?.area?.setOnClickListener {
-            onClickFunction(position,slot.text)
+            onClickFunction(position, slot.text)
         }
-
 
     }
 
-    private fun onClickFunction(position: Int,title :String){
+    private fun onClickFunction(position: Int, title: String) {
+        val idMulti: Int = (ID.toString() + position.toString()).toInt()
         when (ID) {
-            5 -> {
+            3 -> {
                 when (position) {
-                    0 -> {
-                        val intent = Intent(context,MultiplyActivity::class.java)
-                        intent.putExtra("ID",50)
-                        intent.putExtra("TITLE",title)
-                        context.startActivity(intent)
+                    1 -> {
+                        intent(idMulti,title,"การเหนี่ยวนำการเป็นสัด")
                     }
                 }
             }
+            4 -> {
+                when (position) {
+                    0 -> {
+                        intent(idMulti,title,"การผสมเทียม")
+                    }
+                    1 -> {
+                        intent(idMulti, title)
+                    }
+                    2 -> {
+                        intent(idMulti, title,"การผสมเทียม")
+                    }
+                }
+            }
+            5 -> {
+                intent(idMulti, title)
+            }
+
         }
+    }
+
+    private fun intent(idMulti :Int,title: String){
+        val intent = Intent(context, MultiplyActivity::class.java)
+        intent.putExtra("ID", idMulti)
+        intent.putExtra("TITLE", title)
+        context.startActivity(intent)
+    }
+
+    private fun intent(idMulti :Int,title: String,subTitle :String){
+        val intent = Intent(context, MultiplyActivity::class.java)
+        intent.putExtra("ID", idMulti)
+        intent.putExtra("TITLE", title)
+        intent.putExtra("SUB",subTitle)
+        context.startActivity(intent)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): TabFifthViewHolder {

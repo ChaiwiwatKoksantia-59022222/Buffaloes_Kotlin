@@ -1,10 +1,6 @@
 package th.ac.up.agr.buffaloes.Fragment
 
 import android.app.DatePickerDialog
-import android.app.Dialog
-import android.app.DialogFragment
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.support.v4.app.Fragment
@@ -14,18 +10,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.DatePicker
 
-import kotlinx.android.synthetic.main.fragment_tab_first.*
 import kotlinx.android.synthetic.main.fragment_tab_first.view.*
 
 import th.ac.up.agr.buffaloes.R
-import java.time.Year
 import java.util.*
 
 class TabFirstFragment : Fragment() {
 
 
     internal lateinit var view: View
-    //var dateCurrent :String = String()
     private var dateCurrent = Calendar.getInstance()
     private var dateZ = Calendar.getInstance()
     private var dateA = Calendar.getInstance()
@@ -46,14 +39,13 @@ class TabFirstFragment : Fragment() {
         calculate()
         hasShowView()
 
-        view.main_date_button.setOnClickListener { view ->
+        view.main_date_button.setOnClickListener {
 
             DatePickerDialog(activity, dateS, dateCurrent.get(Calendar.YEAR), dateCurrent.get(Calendar.MONTH), dateCurrent.get(Calendar.DAY_OF_MONTH)).show()
 
         }
 
-        view.tab1BackBTN.setOnClickListener { view ->
-
+        view.tab1BackBTN.setOnClickListener {
             showView = false
             hasShowView()
 
@@ -104,7 +96,7 @@ class TabFirstFragment : Fragment() {
     }
 
 
-    internal var dateS: DatePickerDialog.OnDateSetListener = DatePickerDialog.OnDateSetListener { datePicker, year, month, day ->
+    var dateS: DatePickerDialog.OnDateSetListener = DatePickerDialog.OnDateSetListener { _, year, month, day ->
         dateA.set(year, month, day)
         calculate()
         showView = true

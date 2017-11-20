@@ -2,9 +2,7 @@ package th.ac.up.agr.buffaloes.Tools
 
 import android.content.Context
 import android.content.res.TypedArray
-import th.ac.up.agr.buffaloes.Data.TabFifthListData
-import th.ac.up.agr.buffaloes.Data.TabSecondListData
-import th.ac.up.agr.buffaloes.Data.VocabularyData
+import th.ac.up.agr.buffaloes.Data.*
 
 /**
  * Created by androidstudio on 11/13/2017 AD.
@@ -36,6 +34,72 @@ class DataStringTools {
         }
         typedArrayTitle.recycle()
         typedArrayDes.recycle()
+        return data
+
+    }
+
+    fun treatData(title: Int, desText: Int): ArrayList<TreatData> {
+        val typedArrayTitle: TypedArray = context.resources.obtainTypedArray(title)
+        val typedArrayDes: TypedArray = context.resources.obtainTypedArray(desText)
+        var data: ArrayList<TreatData> = ArrayList()
+        var count = 0
+        (0 until typedArrayTitle.length()).mapTo(data) {
+            TreatData(typedArrayTitle.getString(it)
+                    , typedArrayDes.getString(it))
+        }
+        typedArrayTitle.recycle()
+        typedArrayDes.recycle()
+        return data
+
+    }
+
+    fun breedData(title: Int, desText: Int): ArrayList<BreedData> {
+        val typedArrayTitle: TypedArray = context.resources.obtainTypedArray(title)
+        val typedArrayDes: TypedArray = context.resources.obtainTypedArray(desText)
+        var data: ArrayList<BreedData> = ArrayList()
+        var count = 0
+        (0 until typedArrayTitle.length()).mapTo(data) {
+            BreedData(typedArrayTitle.getString(it)
+                    , typedArrayDes.getString(it))
+        }
+        typedArrayTitle.recycle()
+        typedArrayDes.recycle()
+        return data
+
+    }
+
+    fun DeviceData(title: Int, image: Int,defaultRes: Int): ArrayList<DeviceData> {
+        val typedArrayTitle: TypedArray = context.resources.obtainTypedArray(title)
+        val typedArrayImage: TypedArray = context.resources.obtainTypedArray(image)
+        var data: ArrayList<DeviceData> = ArrayList()
+        var count = 0
+        (0 until typedArrayTitle.length()).mapTo(data) {
+            DeviceData(typedArrayTitle.getString(it)
+                    , typedArrayImage.getResourceId(it, defaultRes))
+        }
+        typedArrayTitle.recycle()
+        typedArrayImage.recycle()
+        return data
+
+    }
+
+    fun DiseaseData(title: Int, cause: Int, symptom: Int, treatment: Int): ArrayList<DiseaseData> {
+
+        val typedArrayTitle: TypedArray = context.resources.obtainTypedArray(title)
+        val typedArrayCause: TypedArray = context.resources.obtainTypedArray(cause)
+        val typedArraySymptom: TypedArray = context.resources.obtainTypedArray(symptom)
+        val typedArrayTreatment: TypedArray = context.resources.obtainTypedArray(treatment)
+        var data: ArrayList<DiseaseData> = ArrayList()
+        (0 until typedArrayTitle.length()).mapTo(data) {
+            DiseaseData(typedArrayTitle.getString(it)
+                    , typedArrayCause.getString(it)
+                    , typedArraySymptom.getString(it)
+                    , typedArrayTreatment.getString(it))
+        }
+        typedArrayTitle.recycle()
+        typedArrayCause.recycle()
+        typedArraySymptom.recycle()
+        typedArrayTreatment.recycle()
         return data
 
     }

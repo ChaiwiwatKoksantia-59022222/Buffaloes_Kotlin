@@ -49,6 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/pridi"
                     android:text="กลับ"
                     android:textColor="#78000000"
                     android:textSize="20dp" />

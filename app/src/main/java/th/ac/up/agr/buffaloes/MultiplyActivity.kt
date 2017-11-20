@@ -4,11 +4,12 @@ import android.app.FragmentManager
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import th.ac.up.agr.buffaloes.R
 
 import kotlinx.android.synthetic.main.activity_multiply.*
 import kotlinx.android.synthetic.main.fragment_vocabulary.*
-import th.ac.up.agr.buffaloes.Fragment.VocabularyFragment
+import th.ac.up.agr.buffaloes.Fragment.*
 
 class MultiplyActivity : AppCompatActivity() {
 
@@ -26,7 +27,47 @@ class MultiplyActivity : AppCompatActivity() {
             finish()
         }
 
+        Log.e("ID",ID.toString())
+
         when (ID){
+
+            31 -> {
+
+                val subTitle = bundle.getString("SUB")
+
+                val fragment = DeviceFragment.newInstance(title,subTitle,ID)
+
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.multiply_frame, fragment)
+                        .commit()
+            }
+            40 -> {
+                val subTitle = bundle.getString("SUB")
+                val fragment = DeviceFragment.newInstance(title,subTitle,ID)
+
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.multiply_frame, fragment)
+                        .commit()
+            }
+            41 -> {
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.multiply_frame, ImageFragment())
+                        .commit()
+            }
+            42 -> {
+
+                val subTitle = bundle.getString("SUB")
+                val fragment = DeviceFragment.newInstance(title,subTitle,ID)
+
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.multiply_frame, fragment)
+                        .commit()
+            }
+
             50 -> {
 
                 val fragment = VocabularyFragment.newInstance(title)
@@ -34,6 +75,33 @@ class MultiplyActivity : AppCompatActivity() {
                 supportFragmentManager
                         .beginTransaction()
                         .replace(R.id.multiply_frame, fragment)
+                        .commit()
+            }
+
+            51 -> {
+                val fragment = BreedFragment.newInstance(title)
+
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.multiply_frame, fragment)
+                        .commit()
+            }
+
+            52 -> {
+                val fragment = TreatFragment.newInstance(title)
+
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.multiply_frame, fragment)
+                        .commit()
+            }
+
+            53 -> {
+                val fragment = DiseaseFragment.newInstance(title)
+
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.multiply_frame,fragment)
                         .commit()
             }
         }
