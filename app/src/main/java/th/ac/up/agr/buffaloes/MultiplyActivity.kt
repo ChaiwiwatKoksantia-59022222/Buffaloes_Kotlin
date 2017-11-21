@@ -31,6 +31,34 @@ class MultiplyActivity : AppCompatActivity() {
 
         when (ID){
 
+            10 -> {
+
+                val DAY = bundle.getInt("DAY")
+                val MONTH = bundle.getInt("MONTH")
+                val YEAR = bundle.getInt("YEAR")
+
+                val fragment = ResultFirstFragment.newInstance(DAY,MONTH,YEAR)
+
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.multiply_frame, fragment)
+                        .commit()
+
+            }
+
+            30 -> {
+
+                val subTitle = bundle.getString("SUB")
+
+                val fragment = MainProgramFragment.newInstance(title,subTitle)
+
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.multiply_frame, fragment)
+                        .commit()
+
+            }
+
             31 -> {
 
                 val subTitle = bundle.getString("SUB")

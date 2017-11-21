@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorGreen</item>
         <item name="colorPrimaryDark">@color/colorGreen</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorS3</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -14,9 +14,9 @@
     </style>
 
     <style name="bottomBar">
-        <item name="colorPrimary">@color/colorGreen</item>
-        <item name="colorPrimaryDark">@color/colorGreen</item>
-        <item name="colorAccent">@color/colorGreen</item>
+        <item name="colorPrimary">@color/colorGreenCover</item>
+        <item name="colorPrimaryDark">@color/colorGreenCover</item>
+        <item name="colorAccent">@color/colorGreenCover</item>
     </style>
 
     <style name="mainButton">

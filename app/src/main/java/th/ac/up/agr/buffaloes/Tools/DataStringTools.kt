@@ -38,6 +38,23 @@ class DataStringTools {
 
     }
 
+    fun programData(title: Int, circleText: Int, image: Int, defaultRes: Int): ArrayList<ProgramData> {
+
+        val typedArrayTitle: TypedArray = context.resources.obtainTypedArray(title)
+        val typedArrayDes: TypedArray = context.resources.obtainTypedArray(circleText)
+        val typedArrayImage: TypedArray = context.resources.obtainTypedArray(image)
+        var data: ArrayList<ProgramData> = ArrayList()
+        (0 until typedArrayTitle.length()).mapTo(data) {
+            ProgramData(typedArrayTitle.getString(it)
+                    , typedArrayDes.getString(it)
+                    , typedArrayImage.getResourceId(it, defaultRes))
+        }
+        typedArrayTitle.recycle()
+        typedArrayDes.recycle()
+        return data
+
+    }
+
     fun treatData(title: Int, desText: Int): ArrayList<TreatData> {
         val typedArrayTitle: TypedArray = context.resources.obtainTypedArray(title)
         val typedArrayDes: TypedArray = context.resources.obtainTypedArray(desText)
@@ -68,7 +85,7 @@ class DataStringTools {
 
     }
 
-    fun DeviceData(title: Int, image: Int,defaultRes: Int): ArrayList<DeviceData> {
+    fun DeviceData(title: Int, image: Int, defaultRes: Int): ArrayList<DeviceData> {
         val typedArrayTitle: TypedArray = context.resources.obtainTypedArray(title)
         val typedArrayImage: TypedArray = context.resources.obtainTypedArray(image)
         var data: ArrayList<DeviceData> = ArrayList()

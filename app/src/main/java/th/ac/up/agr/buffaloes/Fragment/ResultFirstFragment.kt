@@ -1,29 +1,37 @@
 package th.ac.up.agr.buffaloes.Fragment
 
-import android.app.DatePickerDialog
+
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.DatePicker
-import kotlinx.android.synthetic.main.fragment_main_bottom.view.*
-
-import kotlinx.android.synthetic.main.fragment_tab_first.view.*
-import th.ac.up.agr.buffaloes.Adapter.ProgramAdapter
-import th.ac.up.agr.buffaloes.Data.ProgramData
+import kotlinx.android.synthetic.main.fragment_result_first.view.*
 
 import th.ac.up.agr.buffaloes.R
-import th.ac.up.agr.buffaloes.Tools.DeviceUtils
-import th.ac.up.agr.buffaloes.Tools.PreCachingLinearLayoutManeger
 import java.util.*
-import kotlin.collections.ArrayList
 
-class TabFirstFragment : Fragment() {
 
+/**
+ * A simple [Fragment] subclass.
+ */
+class ResultFirstFragment : Fragment() {
+
+    companion object {
+
+        fun newInstance(day: Int, month: Int, year: Int): ResultFirstFragment {
+            val args = Bundle()
+            args.putInt("DAY", day)
+            args.putInt("MONTH", month)
+            args.putInt("YEAR", year)
+            //args.putInt("value", value)
+            //args.putSerializable("testData", testData)
+            val fragment = ResultFirstFragment()
+            fragment.arguments = args
+            return fragment
+        }
+    }
 
     internal lateinit var view: View
     private var dateCurrent = Calendar.getInstance()
@@ -34,59 +42,33 @@ class TabFirstFragment : Fragment() {
     private var dateD = Calendar.getInstance()
     private var dateE = Calendar.getInstance()
 
-    var mTimer: CountDownTimer? = null
+    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
 
-    var showView :Boolean = false
+        view = inflater!!.inflate(R.layout.fragment_result_first, container, false)
 
+        dateA.set(arguments.getInt("YEAR"), arguments.getInt("MONTH"), arguments.getInt("DAY"))
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
-        view = inflater!!.inflate(R.layout.fragment_tab_first_s, container, false)
-
-        activity.supportFragmentManager.beginTransaction().replace(R.id.top_frame,MainTopFragment()).commit()
-        activity.supportFragmentManager.beginTransaction().replace(R.id.bottom_frame,MainBottomFragment()).commit()
-
-/*
         calculate()
         hasShowView()
 
-        view.main_date_button.setOnClickListener {
-
-            DatePickerDialog(activity, dateS, dateCurrent.get(Calendar.YEAR), dateCurrent.get(Calendar.MONTH), dateCurrent.get(Calendar.DAY_OF_MONTH)).show()
-
+        view.re_BackBTN.setOnClickListener {
+            activity.finish()
         }
 
-        view.tab1BackBTN.setOnClickListener {
-            showView = false
-            hasShowView()
-
-        }
-*/
         return view
     }
-/*
+
     private fun hasShowView(){
-        if (showView){
-            //view.tab1InputView.visibility = View.GONE
-            view.tab1ShowView.visibility = View.VISIBLE
-            view.tab1MainOff.visibility = View.GONE
-            view.tab1MainOn.visibility = View.VISIBLE
-            view.tab1NullView.visibility = View.GONE
-            //view.tab1Image.visibility = View.GONE
-        }
-        else {
-            view.tab1InputView.visibility = View.VISIBLE
-            view.tab1ShowView.visibility = View.GONE
-            view.tab1MainOff.visibility = View.VISIBLE
-            view.tab1MainOn.visibility = View.GONE
-            view.tab1NullView.visibility = View.VISIBLE
-            //view.tab1Image.visibility = View.VISIBLE
-        }
+
+        view.re_ShowView.visibility = View.VISIBLE
+        view.re_MainOn.visibility = View.VISIBLE
+
     }
 
     private fun setTextView() {
 
-        view.tab1TimeLabel.text = convertDateToString(dateZ.get(Calendar.DAY_OF_MONTH),
+        view.re_TimeLabel.text = convertDateToString(dateZ.get(Calendar.DAY_OF_MONTH),
                 dateZ.get(Calendar.MONTH) + 1,
                 dateZ.get(Calendar.YEAR) + 543)
 
@@ -104,50 +86,6 @@ class TabFirstFragment : Fragment() {
 
         view.result_text_day4.text = convertDateToString(dateD.get(Calendar.DAY_OF_MONTH)
                 , dateD.get(Calendar.MONTH) + 1, dateD.get(Calendar.YEAR) + 543)
-    }
-
-
-    var dateS: DatePickerDialog.OnDateSetListener = DatePickerDialog.OnDateSetListener { _, year, month, day ->
-        dateA.set(year, month, day)
-        calculate()
-        showView = true
-        hasShowView()
-    }
-
-    private fun countDownTimeer() {
-/*
-        var count = 0
-
-        var countDownTime = object : CountDownTimer(10000, 1000) {
-            override fun onFinish() {
-                ledCon(false, false, false)
-            }
-
-            override fun onTick(millisUntilFinished: Long) {
-                val s = millisUntilFinished / 1000
-                val e = s.toInt()
-                //Log.e("Time", e.toString())
-                count++
-
-                when (count) {
-                    2 -> {
-                        ledCon(true, false, false)
-                    }
-                    3 -> {
-                        ledCon(false, true, false)
-                    }
-                    4 -> {
-                        ledCon(false, false, true)
-                    }
-                    else -> {
-                        ledCon(false, false, false)
-                    }
-                }
-
-            }
-        }
-        countDownTime.start()
-*/
     }
 
 
@@ -189,5 +127,5 @@ class TabFirstFragment : Fragment() {
             else -> return "ธันวาคม"
         }
     }
-*/
+
 }

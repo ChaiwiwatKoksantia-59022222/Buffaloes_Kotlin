@@ -38,11 +38,7 @@ class TabFifthAdapter(val data: ArrayList<TabFifthListData>, val context: Contex
         val idMulti: Int = (ID.toString() + position.toString()).toInt()
         when (ID) {
             3 -> {
-                when (position) {
-                    1 -> {
-                        intent(idMulti,title,"การเหนี่ยวนำการเป็นสัด")
-                    }
-                }
+                intent(idMulti,title,"การเหนี่ยวนำการเป็นสัด")
             }
             4 -> {
                 when (position) {

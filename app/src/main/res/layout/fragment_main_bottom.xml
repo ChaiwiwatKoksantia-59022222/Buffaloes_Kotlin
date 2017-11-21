@@ -1,0 +1,155 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorW"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="th.ac.up.agr.buffaloes.Fragment.MainBottomFragment">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/pridi"
+                android:text="โปรแกรม"
+                android:textSize="39dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/pridi_extralight"
+                android:text="การเหนี่ยวนำการเป็นสัด"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/tab_menu_off"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:tint="@color/colorB"
+                        android:src="@drawable/menu_off"
+                        />
+
+                    <ImageView
+                        android:id="@+id/tab_menu_on"
+                        android:visibility="gone"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:tint="@color/colorS3"
+                        android:src="@drawable/menu_on"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/tab_card_off"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:tint="@color/colorB"
+                        android:src="@drawable/list_off"
+                        />
+
+                    <ImageView
+                        android:id="@+id/tab_card_on"
+                        android:visibility="gone"
+                        android:tint="@color/colorS3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/list_on"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/program_main_menu_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="0dp"
+            android:drawSelectorOnTop="false"
+            app:layoutManager="GridLayoutManager"
+            app:spanCount="3"
+            android:listSelector="@android:color/transparent"
+            android:scrollbarThumbVertical="@drawable/line_scrollbar"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/menu_icon"
+
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/program_main_card_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:drawSelectorOnTop="false"
+            app:layoutManager="LinearLayoutManager"
+            android:scrollbars="vertical"
+            android:listSelector="@android:color/transparent"
+            android:scrollbarThumbVertical="@drawable/line_scrollbar_light"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/card_view_program_h"
+
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

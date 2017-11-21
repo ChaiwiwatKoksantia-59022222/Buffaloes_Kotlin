@@ -75,7 +75,7 @@
                         android:fontFamily="@font/pridi"
                         android:padding="0dp"
                         android:text="หัวข้อย่อย"
-                        android:textColor="@color/colorLightGreen"
+                        android:textColor="@color/colorW"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 

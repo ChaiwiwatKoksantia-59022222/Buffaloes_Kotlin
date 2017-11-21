@@ -27,7 +27,7 @@
                 android:fontFamily="@font/pridi"
                 android:padding="10dp"
                 android:text="ชื่อ"
-                android:textColor="@color/colorLightGreen"
+                android:textColor="@color/colorW"
                 android:textSize="18dp"
 
                 android:textStyle="bold" />

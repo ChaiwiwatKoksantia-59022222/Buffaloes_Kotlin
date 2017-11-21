@@ -6,16 +6,21 @@
 
     <color name="colorGreen">#398e32</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="colorLightGreen">#398e32</color>
-    <color name="colorSuperLightGreen">#e1fce0</color>
+    <color name="colorLightGreens">#398e32</color>
+    <color name="colorSuperLightGreens">#e1fce0</color>
     <color name="colorLightGrey">#A6A6A6</color>
-    <color name="colorGreenCover">#59a54c</color>
+    <color name="colorGreenCovers">#59a54c</color>
+
+    <color name="colorLightGreen">#88ba4f</color>
+    <color name="colorSuperLightGreen">#9CCC65</color>
+    <color name="colorGreenCover">#88ba4f</color>
 
     <color name="tabColor">#689F38</color>
 
     <color name="colorS1">#EF5350</color>
     <color name="colorS2">#FFEE58</color>
     <color name="colorS2Text">#FBC02D</color>
+    <color name="colorS2Light">#fff8dc</color>
     <color name="colorS3">#9CCC65</color>
     <color name="colorW">#FFFFFF</color>
     <color name="colorB">#939393</color>
