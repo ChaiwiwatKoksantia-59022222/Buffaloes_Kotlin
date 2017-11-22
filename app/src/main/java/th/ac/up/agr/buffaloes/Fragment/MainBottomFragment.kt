@@ -1,6 +1,7 @@
 package th.ac.up.agr.buffaloes.Fragment
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
@@ -18,6 +19,7 @@ import th.ac.up.agr.buffaloes.Tools.DeviceUtils
 import th.ac.up.agr.buffaloes.Tools.PreCachingLinearLayoutManeger
 import android.support.v7.widget.LinearSnapHelper
 import kotlinx.android.synthetic.main.fragment_main_bottom.*
+import th.ac.up.agr.buffaloes.MultiplyActivity
 import th.ac.up.agr.buffaloes.Tools.DataStringTools
 import th.ac.up.agr.buffaloes.Tools.PreCachingGridLayoutManeger
 
@@ -38,12 +40,22 @@ class MainBottomFragment : Fragment() {
         recyclerviewMenu(view)
         recyclerviewCard(view)
 
-
+        view.text_btn.setOnClickListener {
+            intent(30,"โปรแกรม","การเหนี่ยวนำการเป็นสัด")
+        }
 
 
 
 
         return view
+    }
+
+    private fun intent(idMulti :Int,title: String,subTitle :String){
+        val intent = Intent(context, MultiplyActivity::class.java)
+        intent.putExtra("ID", idMulti)
+        intent.putExtra("TITLE", title)
+        intent.putExtra("SUB",subTitle)
+        context.startActivity(intent)
     }
 
     fun recyclerviewMenu(view: View){
@@ -61,7 +73,10 @@ class MainBottomFragment : Fragment() {
         view.program_main_menu_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
         val data: ArrayList<ProgramData> = DataStringTools(context).programData(R.array.menu_menu_title_text
-                , R.array.menu_menu_title_circle,R.array.induction_program_image_data,R.drawable.unknown_picture)
+                , R.array.menu_menu_title_circle
+                ,R.array.induction_program_text_data
+                ,R.array.induction_program_image_data
+                ,R.drawable.unknown_picture)
         val adapter = ProgramAdapter(data, context,0)
         view.program_main_menu_recyclerview.adapter = adapter
     }
@@ -82,8 +97,11 @@ class MainBottomFragment : Fragment() {
         view.program_main_card_recyclerview.overScrollMode = View.OVER_SCROLL_NEVER
         view.program_main_card_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
-        val data: ArrayList<ProgramData> = DataStringTools(context).programData(R.array.induction_program_text_data
-                , R.array.menu_menu_title_text,R.array.induction_program_image_data,R.drawable.unknown_picture)
+        val data: ArrayList<ProgramData> = DataStringTools(context).programData(R.array.menu_menu_title_text
+                , R.array.menu_menu_title_circle
+                ,R.array.induction_program_text_data
+                ,R.array.induction_program_image_data
+                ,R.drawable.unknown_picture)
         val adapter = ProgramAdapter(data, context,1)
         view.program_main_card_recyclerview.adapter = adapter
 

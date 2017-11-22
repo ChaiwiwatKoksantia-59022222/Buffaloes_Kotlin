@@ -73,7 +73,10 @@ class MainProgramFragment : Fragment() {
         view.pro_main_menu_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
         val data: ArrayList<ProgramData> = DataStringTools(context).programData(R.array.menu_menu_title_text
-                , R.array.menu_menu_title_circle,R.array.induction_program_image_data,R.drawable.unknown_picture)
+                , R.array.menu_menu_title_circle
+                ,R.array.induction_program_text_data
+                ,R.array.induction_program_image_data
+                ,R.drawable.unknown_picture)
         val adapter = ProgramAdapter(data, context,0)
         view.pro_main_menu_recyclerview.adapter = adapter
     }
@@ -94,8 +97,11 @@ class MainProgramFragment : Fragment() {
         view.pro_main_card_recyclerview.overScrollMode = View.OVER_SCROLL_NEVER
         view.pro_main_card_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
-        val data: ArrayList<ProgramData> = DataStringTools(context).programData(R.array.induction_program_text_data
-                , R.array.menu_menu_title_text,R.array.induction_program_image_data,R.drawable.unknown_picture)
+        val data: ArrayList<ProgramData> = DataStringTools(context).programData(R.array.menu_menu_title_text
+                , R.array.menu_menu_title_circle
+                ,R.array.induction_program_text_data
+                ,R.array.induction_program_image_data
+                ,R.drawable.unknown_picture)
         val adapter = ProgramAdapter(data, context,1)
         view.pro_main_card_recyclerview.adapter = adapter
 

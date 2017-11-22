@@ -16,6 +16,9 @@ class ProgramVIewHolder(itemview :View) : RecyclerView.ViewHolder(itemview){
     val title = itemview.menu_menu_text
     val count = itemview.program_menu_count
 
+    val area_circle = itemview.pro_menu_unclick
+    val area_card = itemview.program_date_button
+
     val titleCard = itemview.program_card_title
     val countCard = itemview.program_card_count
 

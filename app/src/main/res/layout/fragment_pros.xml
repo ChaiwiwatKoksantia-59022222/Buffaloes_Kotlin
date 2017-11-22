@@ -1,0 +1,306 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="th.ac.up.agr.buffaloes.Fragment.ProsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pros_name_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pridi"
+                        android:text="โปรแกรม"
+                        android:textSize="36dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/pros_name_sub_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:fontFamily="@font/pridi_light"
+                        android:singleLine="true"
+                        android:text="@string/tab_3"
+                        android:textSize="24dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/pros_card_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="300dp"
+                        android:maxWidth="400dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/e1"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/pros_card_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/pridi_extralight"
+                        android:maxLines="3"
+                        android:layout_marginBottom="10dp"
+                        android:text="รายละเอียด"
+                        android:textSize="20dp"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/line" />
+
+                    <RelativeLayout
+                        android:id="@+id/pros_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginTop="16dp"
+                        android:visibility="visible">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentBottom="false"
+                            android:layout_centerInParent="false"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginTop="10dp"
+                            app:cardBackgroundColor="@color/colorS3"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="0dp"
+                                android:orientation="horizontal"
+                                android:paddingRight="10dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="0dp"
+                                    android:src="@drawable/addevent"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/pros_date_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:fontFamily="@font/pridi_extralight"
+                                    android:paddingBottom="0dp"
+                                    android:paddingLeft="0dp"
+                                    android:paddingRight="0dp"
+                                    android:paddingTop="0dp"
+                                    android:text="คำนวณ"
+                                    android:textColor="#ffffff"
+                                    android:textSize="18dp"
+                                    android:textStyle="normal" />
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                        <RelativeLayout
+                            android:id="@+id/pros_date_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:clickable="true"
+                            android:theme="@style/mainButton" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/prosMainOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginTop="6dp">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="60dp"
+                            android:layout_centerInParent="false"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginTop="10dp"
+                            app:cardBackgroundColor="#efefef"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/prosTimeLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:fontFamily="@font/pridi_extralight"
+                                    android:paddingBottom="0dp"
+                                    android:paddingLeft="0dp"
+                                    android:paddingRight="0dp"
+                                    android:paddingTop="0dp"
+                                    android:text="@string/input_4"
+                                    android:textColor="#bd3b3b3b"
+                                    android:textSize="18dp"
+                                    android:textStyle="normal" />
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/prosBackBTN"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginTop="10dp"
+                            app:cardBackgroundColor="@color/colorS1"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:visibility="visible"
+                                    android:layout_width="20dp"
+                                    android:tint="#FFFFFF"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="0dp"
+                                    android:src="@drawable/multiply" />
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pros_result_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/pridi"
+                android:text="@string/result_main_title"
+                android:textColor="@color/colorB"
+                android:textSize="22dp"
+                android:textStyle="normal" />
+
+            <android.support.v7.widget.CardView
+
+                android:layout_marginTop="10dp"
+                app:cardElevation="0dp"
+                app:contentPadding="0dp"
+                app:cardCornerRadius="14dp"
+                app:cardBackgroundColor="#efefef"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:visibility="visible"
+                    android:layout_marginBottom="6dp"
+                    android:id="@+id/pros_main_card_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="6dp"
+                    android:drawSelectorOnTop="false"
+                    app:layoutManager="LinearLayoutManager"
+                    android:scrollbars="vertical"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbarThumbVertical="@drawable/line_scrollbar_light"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    tools:listitem="@layout/card_date"
+
+                    />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

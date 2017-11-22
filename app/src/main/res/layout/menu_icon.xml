@@ -11,7 +11,7 @@
     android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@+id/menu_unclick"
+        android:id="@+id/pro_menu_unclick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
@@ -39,7 +39,7 @@
                     android:layout_margin="1.5dp"
                     android:layout_centerInParent="true"
                     app:cardCornerRadius="39.5dp"
-                    app:cardBackgroundColor="@color/colorS3"
+                    app:cardBackgroundColor="@color/colorW"
                     android:layout_width="80dp"
                     android:layout_height="80dp"/>
 
@@ -62,7 +62,7 @@
                 android:text="0"
                 android:fontFamily="@font/pridi_extralight"
                 android:textSize="20dp"
-                android:textColor="@color/colorW"
+                android:textColor="@color/colorS3"
                 />
 
         </RelativeLayout>

@@ -132,6 +132,26 @@ class MultiplyActivity : AppCompatActivity() {
                         .replace(R.id.multiply_frame,fragment)
                         .commit()
             }
+
+            54 -> {
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.multiply_frame,TeamFragment())
+                        .commit()
+            }
+            99 -> {
+
+                val subTitle = bundle.getString("SUB")
+                val description = bundle.getString("DES")
+                val image = bundle.getInt("IMAGE")
+                val IDs = bundle.getInt("IDs")
+                val fragment = ProsFragment.newInstance(title,subTitle,description,image,IDs)
+
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.multiply_frame,fragment)
+                        .commit()
+            }
         }
     }
 

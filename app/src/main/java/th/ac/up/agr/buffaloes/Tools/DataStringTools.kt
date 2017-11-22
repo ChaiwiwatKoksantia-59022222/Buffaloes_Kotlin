@@ -38,17 +38,21 @@ class DataStringTools {
 
     }
 
-    fun programData(title: Int, circleText: Int, image: Int, defaultRes: Int): ArrayList<ProgramData> {
+    fun programData(title: Int, circleText: Int, description: Int, image: Int, defaultRes: Int): ArrayList<ProgramData> {
 
         val typedArrayTitle: TypedArray = context.resources.obtainTypedArray(title)
-        val typedArrayDes: TypedArray = context.resources.obtainTypedArray(circleText)
+        val typedArrayCircle: TypedArray = context.resources.obtainTypedArray(circleText)
+        val typedArrayDes: TypedArray = context.resources.obtainTypedArray(description)
         val typedArrayImage: TypedArray = context.resources.obtainTypedArray(image)
         var data: ArrayList<ProgramData> = ArrayList()
         (0 until typedArrayTitle.length()).mapTo(data) {
             ProgramData(typedArrayTitle.getString(it)
+                    , typedArrayCircle.getString(it)
                     , typedArrayDes.getString(it)
                     , typedArrayImage.getResourceId(it, defaultRes))
         }
+        typedArrayImage.recycle()
+        typedArrayCircle.recycle()
         typedArrayTitle.recycle()
         typedArrayDes.recycle()
         return data
