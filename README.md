@@ -14,9 +14,9 @@
 
 ## Download and Installing
 ### APK Download Link
-```
-Coming Soon
-```
+
+[Download](https://drive.google.com/file/d/1W0ftnEjAS960RCYfGwHoybWPwlk0xfZB/view?usp=sharing)
+
 
 ### Google Play Store
 ```
