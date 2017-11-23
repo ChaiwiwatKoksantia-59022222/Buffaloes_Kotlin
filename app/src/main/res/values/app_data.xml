@@ -120,15 +120,13 @@
 
     <string-array name="induction_program_image_data">
 
-        <item>@drawable/e1</item>
-        <item>@drawable/e2</item>
-        <item>@drawable/e3</item>
-        <item>@drawable/e4</item>
-        <item>@drawable/e5</item>
-        <item>@drawable/e6</item>
-        <item>@drawable/e7</item>
-        <item>@drawable/unknown_picture</item>
-        <item>@drawable/unknown_picture</item>
+        <item>@drawable/s1</item>
+        <item>@drawable/s2</item>
+        <item>@drawable/s3s</item>
+        <item>@drawable/s4</item>
+        <item>@drawable/s5</item>
+        <item>@drawable/s6</item>
+        <item>@drawable/s7</item>
 
     </string-array>
 

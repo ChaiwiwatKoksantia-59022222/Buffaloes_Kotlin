@@ -73,7 +73,7 @@
                         android:maxHeight="300dp"
                         android:maxWidth="400dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/e1"
+                        android:src="@drawable/s1"
                         android:visibility="visible" />
 
                     <TextView

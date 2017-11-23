@@ -51,7 +51,7 @@
             android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:src="@drawable/e1" />
+            android:src="@drawable/s1" />
 
         <TextView
             android:id="@+id/program_description"
