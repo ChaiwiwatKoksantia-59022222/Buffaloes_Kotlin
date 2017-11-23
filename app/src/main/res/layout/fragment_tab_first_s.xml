@@ -17,11 +17,12 @@
             android:background="@color/colorW"
             android:id="@+id/top_frame"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="match_parent"
             tools:layout="@layout/fragment_main_top"
             android:layout_marginBottom="0dp" />
 
         <FrameLayout
+            android:visibility="gone"
             android:background="@color/colorW"
             android:id="@+id/bottom_frame"
             android:layout_width="match_parent"
@@ -30,5 +31,7 @@
             android:layout_marginBottom="0dp" />
 
     </LinearLayout>
+
+
 
 </RelativeLayout>

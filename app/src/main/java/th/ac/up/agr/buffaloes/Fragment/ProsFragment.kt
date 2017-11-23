@@ -60,7 +60,7 @@ class ProsFragment : Fragment() {
 
         val title = arguments.getString("TITLE")
         val subTitle = arguments.getString("SUB")
-        val description = arguments.getString("DES")
+        //val description = arguments.getString("DES")
         val image = arguments.getInt("IMAGE")
         val id = arguments.getInt("ID")
 
@@ -68,10 +68,10 @@ class ProsFragment : Fragment() {
 
         view.pros_name_title.text = title
         view.pros_name_sub_title.text = subTitle
-        view.pros_card_title.text = description
+        //view.pros_card_title.text = description
 
         val option = BitmapFactory.Options()
-        option.inSampleSize = 2
+        option.inSampleSize = 0
         val bitmap = BitmapFactory.decodeResource(context.resources, image, option)
         view.pros_card_image.setImageBitmap(bitmap)
 

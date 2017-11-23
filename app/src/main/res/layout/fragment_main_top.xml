@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,130 +7,191 @@
     android:orientation="vertical"
     tools:context="th.ac.up.agr.buffaloes.Fragment.MainTopFragment">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
         android:visibility="visible">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/main_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="22dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/pic" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/mainScreen_text_big"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="0dp"
-                android:fontFamily="@font/pridi"
-                android:text="@string/calName"
-                android:textSize="39dp"
-                android:textStyle="bold"
-                android:visibility="gone" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/line_ss"
-                android:visibility="gone" />
+                android:layout_gravity="left|bottom"
+                android:fontFamily="sans-serif-bold"
+                android:text="@string/name_big"
+                android:textSize="36dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/mainScreen_text_little"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="0dp"
-                android:layout_marginLeft="16dp"
+                android:layout_gravity="left"
                 android:layout_marginTop="0dp"
-                android:fontFamily="@font/pridi_extralight"
-                android:text="@string/calNames"
-                android:textSize="24dp"
-                android:textStyle="bold" />
+                android:fontFamily="sans-serif-light"
+                android:text="@string/name_little"
+                android:textSize="16dp" />
+
 
         </LinearLayout>
 
         <RelativeLayout
-            android:id="@+id/tab1MainOff"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="16dp"
+            android:background="#398e32" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:visibility="visible">
 
-            <android.support.v7.widget.CardView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_centerInParent="false"
-                android:layout_marginBottom="0dp"
-                android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/colorS3"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="0dp">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="22dp"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="0dp"
-                    android:orientation="horizontal"
-                    android:paddingRight="10dp">
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/pridi"
+                    android:text="@string/calName"
+                    android:textSize="39dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="0dp"
-                        android:src="@drawable/addevent" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/line_ss"
+                    android:visibility="gone" />
 
-                    <TextView
-                        android:id="@+id/main_date_text"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/pridi_extralight"
+                    android:text="@string/calNames"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/tab1MainOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="6dp"
+                android:visibility="visible">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="false"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/colorS3"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="0dp"
-                        android:fontFamily="@font/pridi_extralight"
-                        android:paddingBottom="0dp"
-                        android:paddingLeft="0dp"
-                        android:paddingRight="0dp"
-                        android:paddingTop="0dp"
-                        android:text="@string/input_3"
-                        android:textColor="#ffffff"
-                        android:textSize="18dp"
-                        android:textStyle="normal" />
+                        android:layout_marginLeft="0dp"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp">
 
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="0dp"
+                            android:src="@drawable/addevent" />
 
-            </android.support.v7.widget.CardView>
+                        <TextView
+                            android:id="@+id/main_date_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/pridi_extralight"
+                            android:paddingBottom="0dp"
+                            android:paddingLeft="0dp"
+                            android:paddingRight="0dp"
+                            android:paddingTop="0dp"
+                            android:text="@string/input_3"
+                            android:textColor="#ffffff"
+                            android:textSize="18dp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
 
 
-            <RelativeLayout
-                android:id="@+id/main_date_button"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:clickable="true"
-                android:theme="@style/mainButton" />
+                <RelativeLayout
+                    android:id="@+id/main_date_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:theme="@style/mainButton" />
 
-        </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="46dp"
+            android:layout_marginRight="46dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorS3"
+            android:visibility="gone" />
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="46dp"
-        android:layout_marginRight="46dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/colorS3"
-        android:visibility="visible" />
 
-
-</LinearLayout>
+</RelativeLayout>
