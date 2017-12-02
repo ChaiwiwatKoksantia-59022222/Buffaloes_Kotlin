@@ -15,7 +15,8 @@
 ## Download and Installing
 ### APK Download Link
 
-[Download](http://www.mediafire.com/file/778zvbfiy78c63s/Buffaloes.apk)
+[Download](http://www.mediafire.com/file/bxosw3adr9a2ik8/Buffaloes.apk)
+Link Updata at 3 Dec 2017
 
 ### Google Play Store
 ```
