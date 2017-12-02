@@ -60,7 +60,7 @@ class ProsFragment : Fragment() {
 
         val title = arguments.getString("TITLE")
         val subTitle = arguments.getString("SUB")
-        //val description = arguments.getString("DES")
+        val description = arguments.getString("DES")
         val image = arguments.getInt("IMAGE")
         val id = arguments.getInt("ID")
 
@@ -68,7 +68,7 @@ class ProsFragment : Fragment() {
 
         view.pros_name_title.text = title
         view.pros_name_sub_title.text = subTitle
-        //view.pros_card_title.text = description
+        view.pros_card_title.text = description
 
         val option = BitmapFactory.Options()
         option.inSampleSize = 0
@@ -163,26 +163,12 @@ class ProsFragment : Fragment() {
     fun da (ID: Int) : ArrayList<String>{
 
         return when (ID) {
+
             1 -> {
-                getAll(0,7,12,-1)
-            }
-            2 -> {
                 getAll(0,7,9,-1)
             }
-            3 -> {
+            2 -> {
                 getAll(0,7,10,-1)
-            }
-            4 -> {
-                getAll(0,7,10,-1)
-            }
-            5 -> {
-                getAll(0,7,13,-1)
-            }
-            6 -> {
-                getAll(0,8,10,-1)
-            }
-            7 -> {
-                getAll(0,7,9,10)
             }
             else -> {
                 ArrayList<String>()

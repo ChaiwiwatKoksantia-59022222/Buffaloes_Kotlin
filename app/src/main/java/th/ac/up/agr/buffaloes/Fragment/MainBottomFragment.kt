@@ -63,7 +63,7 @@ class MainBottomFragment : Fragment() {
         layoutManager.orientation = GridLayoutManager.VERTICAL
 
         layoutManager.extraLayoutSpace = DeviceUtils(context).getScreenHeight()
-        layoutManager.reverseLayout = false
+        layoutManager.reverseLayout = true
         view.program_main_menu_recyclerview.layoutManager = layoutManager
         view.program_main_menu_recyclerview.setHasFixedSize(true)
         view.program_main_menu_recyclerview.setItemViewCacheSize(10000)
@@ -88,7 +88,7 @@ class MainBottomFragment : Fragment() {
         layoutManager.orientation = LinearLayoutManager.VERTICAL
 
         layoutManager.extraLayoutSpace = DeviceUtils(context).getScreenHeight()
-        layoutManager.reverseLayout = false
+        layoutManager.reverseLayout = true
         view.program_main_card_recyclerview.layoutManager = layoutManager
         view.program_main_card_recyclerview.setHasFixedSize(true)
         view.program_main_card_recyclerview.setItemViewCacheSize(10000)

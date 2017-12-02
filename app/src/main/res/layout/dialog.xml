@@ -26,8 +26,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-light"
-                android:hint="TEXT"
+                android:fontFamily="@font/pridi_extralight"
+                android:hint="ข้อความ"
                 android:padding="10dp"
                 android:textColor="#616161"
                 android:textSize="20dp" />
@@ -44,23 +44,25 @@
                     android:layout_margin="10dp">
 
                     <Button
+                        android:textSize="18dp"
                         android:id="@+id/can_cancel_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
-                        android:fontFamily="sans-serif-light"
-                        android:text="CANCEL"
+                        android:fontFamily="@font/pridi_light"
+                        android:text="ยกเลิก"
                         android:textColor="#616161"
 
                         />
 
                     <Button
+                        android:textSize="18dp"
                         android:id="@+id/can_confirm_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
-                        android:fontFamily="sans-serif-light"
-                        android:text="CONFIRM"
+                        android:fontFamily="@font/pridi_light"
+                        android:text="รับทราบ"
                         android:textColor="@color/colorLightGreen" />
 
                 </LinearLayout>

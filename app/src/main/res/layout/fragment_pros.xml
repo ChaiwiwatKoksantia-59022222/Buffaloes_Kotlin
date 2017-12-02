@@ -77,16 +77,27 @@
                         android:visibility="visible" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/pridi_light"
+                        android:maxLines="3"
+                        android:layout_marginBottom="0dp"
+                        android:text="ราคา"
+                        android:textStyle="bold"
+                        android:textSize="24dp"
+                        android:visibility="visible" />
+                    <TextView
+                        android:layout_marginLeft="0dp"
                         android:id="@+id/pros_card_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:fontFamily="@font/pridi_extralight"
-                        android:maxLines="3"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/pridi_light"
                         android:layout_marginBottom="10dp"
                         android:text="รายละเอียด"
                         android:textSize="20dp"
-                        android:visibility="gone" />
+                        android:visibility="visible" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"

@@ -74,14 +74,16 @@ class DataStringTools {
 
     }
 
-    fun breedData(title: Int, desText: Int): ArrayList<BreedData> {
+    fun breedData(title: Int, desText: Int, image: Int,defaultRes: Int): ArrayList<BreedData> {
         val typedArrayTitle: TypedArray = context.resources.obtainTypedArray(title)
         val typedArrayDes: TypedArray = context.resources.obtainTypedArray(desText)
+        val typedArrayImage: TypedArray = context.resources.obtainTypedArray(image)
         var data: ArrayList<BreedData> = ArrayList()
         var count = 0
         (0 until typedArrayTitle.length()).mapTo(data) {
             BreedData(typedArrayTitle.getString(it)
-                    , typedArrayDes.getString(it))
+                    , typedArrayDes.getString(it)
+                    , typedArrayImage.getResourceId(it, defaultRes))
         }
         typedArrayTitle.recycle()
         typedArrayDes.recycle()

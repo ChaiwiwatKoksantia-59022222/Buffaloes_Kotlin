@@ -36,6 +36,7 @@
         <item>พันธุ์กระบือ</item>
         <item>การจัดการเลี้ยงดูกระบือ</item>
         <item>โรคที่มักพบในกระบือ</item>
+        <item>คำนวนการใช้ยา</item>
         <item>ผู้จัดทำ</item>
     </string-array>
 
@@ -45,6 +46,7 @@
         <item>@drawable/menu_buffalo</item>
         <item>@drawable/menu_feeding</item>
         <item>@drawable/menu_virus</item>
+        <item>@drawable/in</item>
         <item>@drawable/menu_people</item>
     </string-array>
 

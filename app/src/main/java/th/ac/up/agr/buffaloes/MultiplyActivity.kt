@@ -134,6 +134,14 @@ class MultiplyActivity : AppCompatActivity() {
             }
 
             54 -> {
+
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.multiply_frame,INFragment())
+                        .commit()
+            }
+
+            55 -> {
                 supportFragmentManager
                         .beginTransaction()
                         .replace(R.id.multiply_frame,TeamFragment())
