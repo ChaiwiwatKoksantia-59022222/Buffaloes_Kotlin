@@ -78,8 +78,8 @@ class ResultFirstFragment : Fragment() {
         view.result_text_day1.text = convertDateToString(dateZ.get(Calendar.DAY_OF_MONTH)
                 , dateZ.get(Calendar.MONTH) + 1, dateZ.get(Calendar.YEAR) + 543)
 
-        view.result_text_day2.text = convertDateToString(dateB.get(Calendar.DAY_OF_MONTH)
-                , dateB.get(Calendar.MONTH) + 1, dateB.get(Calendar.YEAR) + 543)
+        view.result_text_day2.text = convertDateToString(dateA.get(Calendar.DAY_OF_MONTH)
+                , dateA.get(Calendar.MONTH) + 1, dateA.get(Calendar.YEAR) + 543)
 
         view.result_text_day3.text = convertDateToString(dateE.get(Calendar.DAY_OF_MONTH)
                 , dateE.get(Calendar.MONTH) + 1, dateE.get(Calendar.YEAR) + 543)
@@ -93,9 +93,9 @@ class ResultFirstFragment : Fragment() {
 
         dateZ.set(dateA.get(Calendar.YEAR), dateA.get(Calendar.MONTH), dateA.get(Calendar.DAY_OF_MONTH))
 
-        //dateA.add(Calendar.DAY_OF_MONTH, 21)
+        dateA.add(Calendar.DAY_OF_MONTH, 21)
         dateB.set(dateA.get(Calendar.YEAR), dateA.get(Calendar.MONTH), dateA.get(Calendar.DAY_OF_MONTH))
-        dateB.add(Calendar.DAY_OF_MONTH, 325)
+        dateB.add(Calendar.DAY_OF_MONTH, 304)
         dateC.set(dateB.get(Calendar.YEAR), dateB.get(Calendar.MONTH), dateB.get(Calendar.DAY_OF_MONTH))
         //dateC.add(Calendar.MONTH, 10)
         dateD.set(dateC.get(Calendar.YEAR), dateC.get(Calendar.MONTH), dateC.get(Calendar.DAY_OF_MONTH))
