@@ -61,7 +61,7 @@ class INFragment : Fragment() {
         val w2 = view.in_w2.text?.toString()
 
         if (v1.isNullOrEmpty() or w1.isNullOrEmpty() or w2.isNullOrEmpty()){
-            dialog("ข้อมูลไม่ถูกต้อง กรุณาตรวจสอบข้อมูลอีกครั้ง","รับทราบ")
+            dialog("ข้อมูลไม่ถูกต้อง กรุณาตรวจสอบข้อมูลอีกครั้ง","ปิด")
         } else {
             val vs1 = java.lang.Double.parseDouble(v1)
             val ws1 = java.lang.Double.parseDouble(w1)
@@ -104,7 +104,7 @@ class INFragment : Fragment() {
     }
 
     private fun setText(view: View, v1: String, w1: String, w2: String, result: String) {
-        view.in_text.text = "วัวน้ำหนัก $w2 กิโลกรัม ใช้ยาประมาณ $v1 มิลลิลิตร\nถ้าวัวน้ำหนัก $w1 กิโลกรัม จะต้องใช้ยาปริมาณ $result มิลลิลิตร"
+        view.in_text.text = "ปริมาณยาที่ต้องใช้ $result ml"
     }
 
     private fun clearEditText(view: View) {
