@@ -9,4 +9,7 @@ class DeviceViewHolder(itemview :View) : RecyclerView.ViewHolder(itemview){
     val title = itemview.card_view_image_title_text
     val image = itemview.card_view_image_image
 
+    val description = itemview.card_view_image_text
+    val textLayout = itemview.card_view_image_text_layout
+
 }

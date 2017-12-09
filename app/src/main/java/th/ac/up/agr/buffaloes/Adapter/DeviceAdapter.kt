@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.BitmapFactory
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import th.ac.up.agr.buffaloes.Data.DeviceData
 import th.ac.up.agr.buffaloes.R
@@ -21,6 +22,13 @@ class DeviceAdapter(val data :ArrayList<DeviceData>,val context: Context) : Recy
         option.inSampleSize = 2
         val bitmap = BitmapFactory.decodeResource(context.resources, slot.image, option)
         holder?.image?.setImageBitmap(bitmap)
+
+        if (!slot.description.contentEquals("NO")){
+            holder?.textLayout?.visibility = View.VISIBLE
+            holder?.description?.text = slot.description
+        } else {
+            holder?.textLayout?.visibility = View.GONE
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): DeviceViewHolder {

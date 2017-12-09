@@ -202,9 +202,10 @@ class ProsFragment : Fragment() {
 
         var data = da(ID)
 
-        val dats = ResultString(ID).textS(data)
+        val dats = ResultString(ID).textS(data,0)
+        val date = ResultString(ID).textS(data,1)
 
-        val adapter = ProsAdapter(dats, context)
+        val adapter = ProsAdapter(dats,date, context)
         view.pros_main_card_recyclerview.adapter = adapter
     }
 

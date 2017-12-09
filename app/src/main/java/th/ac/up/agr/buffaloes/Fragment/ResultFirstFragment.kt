@@ -108,7 +108,7 @@ class ResultFirstFragment : Fragment() {
 
     private fun convertDateToString(day: Int, month: Int, year: Int): String {
         return "วันที่ " + day + " " +
-                convertMonth_intToName(month) + " พ.ศ." + (year)
+                convertMonth_intToName(month) + " พ.ศ. " + (year)
     }
 
     private fun convertMonth_intToName(month: Int): String {

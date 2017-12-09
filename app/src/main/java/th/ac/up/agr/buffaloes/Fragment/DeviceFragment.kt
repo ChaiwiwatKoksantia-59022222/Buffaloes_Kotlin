@@ -63,17 +63,17 @@ class DeviceFragment : Fragment() {
             31 -> {
                 data = DataStringTools(context).DeviceData(R.array.induction_equipment_text_data
                         , R.array.induction_equipment_image_data
-                        , R.drawable.unknown_picture)
+                        , R.drawable.unknown_picture,R.array.induction_equipment_description)
             }
             40 -> {
                 data = DataStringTools(context).DeviceData(R.array.artificial_insemination_short_method_text_data
                         , R.array.artificial_insemination_method_image_data
-                        , R.drawable.unknown_picture)
+                        , R.drawable.unknown_picture,R.array.artificial_insemination_equipment_description)
             }
             42 -> {
                 data = DataStringTools(context).DeviceData(R.array.artificial_insemination_equipment_text_data
                         , R.array.artificial_insemination_image_data
-                        , R.drawable.unknown_picture)
+                        , R.drawable.unknown_picture,R.array.artificial_insemination_equipment_description)
             }
         }
 

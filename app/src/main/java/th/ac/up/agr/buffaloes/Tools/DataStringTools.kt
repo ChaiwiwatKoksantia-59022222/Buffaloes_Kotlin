@@ -74,7 +74,7 @@ class DataStringTools {
 
     }
 
-    fun breedData(title: Int, desText: Int, image: Int,defaultRes: Int): ArrayList<BreedData> {
+    fun breedData(title: Int, desText: Int, image: Int, defaultRes: Int): ArrayList<BreedData> {
         val typedArrayTitle: TypedArray = context.resources.obtainTypedArray(title)
         val typedArrayDes: TypedArray = context.resources.obtainTypedArray(desText)
         val typedArrayImage: TypedArray = context.resources.obtainTypedArray(image)
@@ -91,14 +91,15 @@ class DataStringTools {
 
     }
 
-    fun DeviceData(title: Int, image: Int, defaultRes: Int): ArrayList<DeviceData> {
+    fun DeviceData(title: Int, image: Int, defaultRes: Int, des: Int): ArrayList<DeviceData> {
         val typedArrayTitle: TypedArray = context.resources.obtainTypedArray(title)
         val typedArrayImage: TypedArray = context.resources.obtainTypedArray(image)
+        val typedArrayDescription: TypedArray = context.resources.obtainTypedArray(des)
         var data: ArrayList<DeviceData> = ArrayList()
         var count = 0
         (0 until typedArrayTitle.length()).mapTo(data) {
             DeviceData(typedArrayTitle.getString(it)
-                    , typedArrayImage.getResourceId(it, defaultRes))
+                    , typedArrayImage.getResourceId(it, defaultRes), typedArrayDescription.getString(it))
         }
         typedArrayTitle.recycle()
         typedArrayImage.recycle()

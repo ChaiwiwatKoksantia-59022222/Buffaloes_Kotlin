@@ -18,23 +18,35 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <android.support.v7.widget.CardView
-                android:visibility="gone"
+                android:id="@+id/card_date_title_layout"
+                app:cardBackgroundColor="@color/colorPrimary"
+                android:visibility="visible"
                 app:cardElevation="0dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                app:cardCornerRadius="8dp"
-                android:layout_width="16dp"
-                android:layout_height="match_parent">
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                app:cardCornerRadius="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <RelativeLayout
-                    android:background="@color/colorS3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/card_date_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ข้อความ"
+                    android:textColor="@color/colorW"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:fontFamily="@font/pridi"
+                    android:textSize="20dp"
+                    />
 
             </android.support.v7.widget.CardView>
 
@@ -47,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="text"
-                android:fontFamily="@font/pridi_light"
+                android:fontFamily="@font/pridi_extralight"
                 android:textSize="20dp"
                 />
 

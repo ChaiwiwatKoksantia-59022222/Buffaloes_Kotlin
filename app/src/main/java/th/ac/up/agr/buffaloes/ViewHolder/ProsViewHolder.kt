@@ -8,5 +8,7 @@ class ProsViewHolder(itemView :View) : RecyclerView.ViewHolder(itemView){
 
     val textView = itemView.card_date_text
 
+    val title = itemView.card_date_title
+    val layout = itemView.card_date_title_layout
 
 }
