@@ -68,7 +68,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pridi_light"
-                        android:text="น้ำหนักของกระบือ ( kg )"
+                        android:text="น้ำหนักของกระบือ (kg)"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -113,7 +113,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pridi_light"
-                        android:text="ปริมาณยาที่แนะนำ ( ml/kg )"
+                        android:text="ปริมาณยาที่แนะนำ (ml/kg)"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 

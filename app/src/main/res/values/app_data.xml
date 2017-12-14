@@ -38,8 +38,8 @@
     </string-array>
 
     <string-array name="induction_program_text_data">
-        <item>รวม 400 บาท\n\n- \tPGF2α ใช้ปริมาตร 2 ml ราคาขวดละ 80 บาท\n- \tGnRH ใช้ปริมาตร 4 ml ราคาขวดละ 320 บาท</item>
-        <item>รวม 1,600 บาท\n\n- \tCIDR® จำนวน 1 อัน ราคา 400 บาท\n- \tปืนสอดแท่งฮอร์โมน CIDR® จำนวน 1 อัน ราคา 800 บาท\n- \tPGF2α ใช้ปริมาตร 2 ml ราคาขวดละ 80 บาท\n- \tGnRH ใช้ปริมาตร 4 ml ราคาขวดละ 320 บาท</item>
+        <item>รวม 400 บาท\n\n- \tPGF2α ใช้ปริมาตร 2 ml ราคา 80 บาท\n- \tGnRH ใช้ปริมาตร 4 ml ราคา 320 บาท</item>
+        <item>รวม 1,600 บาท\n\n- \tCIDR® จำนวน 1 อัน ราคา 400 บาท\n- \tปืนสอดแท่งฮอร์โมน CIDR® จำนวน 1 อัน ราคา 800 บาท\n- \tPGF2α ใช้ปริมาตร 2 ml ราคา 80 บาท\n- \tGnRH ใช้ปริมาตร 4 ml ราคา 320 บาท</item>
     </string-array>
 
     <string-array name="artificial_insemination_equipment_text_data">
@@ -74,7 +74,7 @@
 
     <string-array name="induction_equipment_description">
         <item>ราคา 4000 บาท 1 ถุง บรรจุ 10 อัน</item>
-        <item>จำนวน 1 อัน ราคา 800 บาท</item>
+        <item>ราคา 800 บาท จำนวน 1 อัน</item>
         <item>NO</item>
         <item>ราคาขวดละ 800 บาท ปริมาตร 10 ml</item>
         <item>ราคาขวดละ 800 บาท ปริมาตร 20 ml</item>
