@@ -22,7 +22,7 @@ class TabSecondAdapter(val data: ArrayList<TabSecondListData>, val context: Cont
     override fun onBindViewHolder(holder: TabSecordViewHolder?, position: Int) {
 
         val slot: TabSecondListData = data[position]
-        holder?.textviewTitle?.text = (position + 1).toString() + ". " + slot.title
+        holder?.textviewTitle?.text = slot.title
         holder?.textviewDescription?.text = slot.desText
 
         val option = BitmapFactory.Options()
