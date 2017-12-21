@@ -38,7 +38,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:fontFamily="@font/pridi"
-                        android:text="คำนวนการใช้ยา"
+                        android:text="คำนวณการใช้ยา"
                         android:textColor="#c83b3b3b"
                         android:textSize="36dp"
                         android:textStyle="bold" />
