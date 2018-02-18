@@ -42,18 +42,18 @@ class ResultFirstFragment : Fragment() {
     private var dateD = Calendar.getInstance()
     private var dateE = Calendar.getInstance()
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
         view = inflater!!.inflate(R.layout.fragment_result_first, container, false)
 
-        dateA.set(arguments.getInt("YEAR"), arguments.getInt("MONTH"), arguments.getInt("DAY"))
+        dateA.set(arguments!!.getInt("YEAR"), arguments!!.getInt("MONTH"), arguments!!.getInt("DAY"))
 
         calculate()
         hasShowView()
 
         view.re_BackBTN.setOnClickListener {
-            activity.finish()
+            activity!!.finish()
         }
 
         return view

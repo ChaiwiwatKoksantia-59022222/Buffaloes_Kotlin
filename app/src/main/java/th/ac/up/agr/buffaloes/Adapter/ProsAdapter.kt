@@ -25,10 +25,16 @@ class ProsAdapter(val data :ArrayList<String>,val date :ArrayList<String>,val co
 
         holder?.title?.text = date[position]
 
+
+
         when(position){
-            0 -> holder?.layout?.cardBackgroundColor = ColorStateList.valueOf(context.resources.getColor(R.color.colorS1))
-            1 -> holder?.layout?.cardBackgroundColor = ColorStateList.valueOf(context.resources.getColor(R.color.colorS2Text))
-            2 -> holder?.layout?.cardBackgroundColor = ColorStateList.valueOf(context.resources.getColor(R.color.colorS3))
+            //0 -> holder?.layout?.cardBackgroundColor = ColorStateList.valueOf(context.resources.getColor(R.color.colorS1))
+            0 -> holder?.layout?.setCardBackgroundColor(ColorStateList.valueOf(context.resources.getColor(R.color.colorS1)))
+            1 -> holder?.layout?.setCardBackgroundColor(ColorStateList.valueOf(context.resources.getColor(R.color.colorS2Text)))
+            2 -> holder?.layout?.setCardBackgroundColor(ColorStateList.valueOf(context.resources.getColor(R.color.colorS3)))
+
+        //1 -> holder?.layout?.cardBackgroundColor = ColorStateList.valueOf(context.resources.getColor(R.color.colorS2Text))
+            //2 -> holder?.layout?.cardBackgroundColor = ColorStateList.valueOf(context.resources.getColor(R.color.colorS3))
         }
 
     }

@@ -34,16 +34,16 @@ class VocabularyFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater!!.inflate(R.layout.fragment_vocabulary,container,false)
 
-        val title = arguments.getString("TITLE")
+        val title = arguments?.getString("TITLE")
         view.vocabulary_title_name.text = title
 
-        val layoutManager = PreCachingLinearLayoutManeger(context)
+        val layoutManager = PreCachingLinearLayoutManeger(context!!)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
-        layoutManager.extraLayoutSpace = DeviceUtils(context).getScreenHeight()
+        layoutManager.extraLayoutSpace = DeviceUtils(context!!).getScreenHeight()
         layoutManager.reverseLayout = false
         view.vocabulary_recyclerview.layoutManager = layoutManager
         view.vocabulary_recyclerview.setHasFixedSize(true)
@@ -52,10 +52,10 @@ class VocabularyFragment : Fragment() {
         view.vocabulary_recyclerview.overScrollMode = View.OVER_SCROLL_NEVER
         view.vocabulary_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
-        val data: ArrayList<VocabularyData> = DataStringTools(context).vocabularyData(R.array.vocabulary_word_text_data
+        val data: ArrayList<VocabularyData> = DataStringTools(context!!).vocabularyData(R.array.vocabulary_word_text_data
                 , R.array.vocabulary_meaning_text_data)
 
-        val adapter = VocabularyAdapter(data,context)
+        val adapter = VocabularyAdapter(data,context!!)
         view.vocabulary_recyclerview.adapter = adapter
 
         return view

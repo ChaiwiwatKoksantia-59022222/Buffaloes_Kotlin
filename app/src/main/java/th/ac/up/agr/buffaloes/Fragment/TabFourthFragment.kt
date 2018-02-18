@@ -26,7 +26,7 @@ class TabFourthFragment : Fragment() {
 
     var showDetail :Boolean = true
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         view = inflater!!.inflate(R.layout.fragment_tab_fourth, container, false)
 
@@ -38,9 +38,9 @@ class TabFourthFragment : Fragment() {
             showHideMore()
         }
 
-        val layoutManager = PreCachingGridLayoutManeger(context,3)
+        val layoutManager = PreCachingGridLayoutManeger(context!!,3)
         layoutManager.orientation = GridLayoutManager.VERTICAL
-        layoutManager.extraLayoutSpace = DeviceUtils(context).getScreenHeight()
+        layoutManager.extraLayoutSpace = DeviceUtils(context!!).getScreenHeight()
         layoutManager.reverseLayout = false
         view.tab4_recyclerview.layoutManager = layoutManager
         view.tab4_recyclerview.setHasFixedSize(true)
@@ -50,11 +50,11 @@ class TabFourthFragment : Fragment() {
         view.tab4_recyclerview.overScrollMode = View.OVER_SCROLL_NEVER
         view.tab4_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
-        val data: ArrayList<TabFifthListData> = DataStringTools(context).tab5MenuData(R.array.tab4Text
+        val data: ArrayList<TabFifthListData> = DataStringTools(context!!).tab5MenuData(R.array.tab4Text
                 , R.array.tab4Image
                 , R.drawable.unknown_picture)
 
-        val adapter = TabFifthAdapter(data, context,4)
+        val adapter = TabFifthAdapter(data, context!!,4)
         view.tab4_recyclerview.adapter = adapter
 
 

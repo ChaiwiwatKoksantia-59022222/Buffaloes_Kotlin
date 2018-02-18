@@ -36,16 +36,16 @@ class DiseaseFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater!!.inflate(R.layout.fragment_disease, container, false)
 
-        val title = arguments.getString("TITLE")
+        val title = arguments?.getString("TITLE")
         view.disease_title_name.text = title
 
-        val layoutManager = PreCachingLinearLayoutManeger(context)
+        val layoutManager = PreCachingLinearLayoutManeger(context!!)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
-        layoutManager.extraLayoutSpace = DeviceUtils(context).getScreenHeight()
+        layoutManager.extraLayoutSpace = DeviceUtils(context!!).getScreenHeight()
         layoutManager.reverseLayout = false
         view.disease_recyclerview.layoutManager = layoutManager
         view.disease_recyclerview.setHasFixedSize(true)
@@ -54,12 +54,12 @@ class DiseaseFragment : Fragment() {
         view.disease_recyclerview.overScrollMode = View.OVER_SCROLL_NEVER
         view.disease_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
-        val data: ArrayList<DiseaseData> = DataStringTools(context).DiseaseData(R.array.disease_title_text
+        val data: ArrayList<DiseaseData> = DataStringTools(context!!).DiseaseData(R.array.disease_title_text
                 , R.array.disease_cause_text
                 , R.array.disease_symptom_text
                 , R.array.disease_treatment_text)
 
-        val adapter = DiseaseAdapter(data, context)
+        val adapter = DiseaseAdapter(data, context!!)
         view.disease_recyclerview.adapter = adapter
 
 

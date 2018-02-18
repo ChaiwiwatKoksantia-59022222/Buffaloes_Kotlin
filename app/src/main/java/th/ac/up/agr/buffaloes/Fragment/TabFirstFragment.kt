@@ -39,12 +39,12 @@ class TabFirstFragment : Fragment() {
     var showView :Boolean = false
 
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         view = inflater!!.inflate(R.layout.fragment_tab_first_s, container, false)
 
-        activity.supportFragmentManager.beginTransaction().replace(R.id.top_frame,MainTopFragment()).commit()
-        activity.supportFragmentManager.beginTransaction().replace(R.id.bottom_frame,MainBottomFragment()).commit()
+        activity!!.supportFragmentManager.beginTransaction().replace(R.id.top_frame,MainTopFragment()).commit()
+        activity!!.supportFragmentManager.beginTransaction().replace(R.id.bottom_frame,MainBottomFragment()).commit()
 
 /*
         calculate()

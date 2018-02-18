@@ -30,7 +30,7 @@ import th.ac.up.agr.buffaloes.Tools.PreCachingGridLayoutManeger
 class MainBottomFragment : Fragment() {
 
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
         val view = inflater!!.inflate(R.layout.fragment_main_bottom, container, false)
@@ -55,14 +55,14 @@ class MainBottomFragment : Fragment() {
         intent.putExtra("ID", idMulti)
         intent.putExtra("TITLE", title)
         intent.putExtra("SUB",subTitle)
-        context.startActivity(intent)
+        context!!.startActivity(intent)
     }
 
     fun recyclerviewMenu(view: View){
-        val layoutManager = PreCachingGridLayoutManeger(context, 3)
+        val layoutManager = PreCachingGridLayoutManeger(context!!, 3)
         layoutManager.orientation = GridLayoutManager.VERTICAL
 
-        layoutManager.extraLayoutSpace = DeviceUtils(context).getScreenHeight()
+        layoutManager.extraLayoutSpace = DeviceUtils(context!!).getScreenHeight()
         layoutManager.reverseLayout = true
         view.program_main_menu_recyclerview.layoutManager = layoutManager
         view.program_main_menu_recyclerview.setHasFixedSize(true)
@@ -72,22 +72,22 @@ class MainBottomFragment : Fragment() {
         view.program_main_menu_recyclerview.overScrollMode = View.OVER_SCROLL_NEVER
         view.program_main_menu_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
-        val data: ArrayList<ProgramData> = DataStringTools(context).programData(R.array.menu_menu_title_text
+        val data: ArrayList<ProgramData> = DataStringTools(context!!).programData(R.array.menu_menu_title_text
                 , R.array.menu_menu_title_circle
                 ,R.array.induction_program_text_data
                 ,R.array.induction_program_image_data
                 ,R.drawable.unknown_picture)
-        val adapter = ProgramAdapter(data, context,0)
+        val adapter = ProgramAdapter(data, context!!,0)
         view.program_main_menu_recyclerview.adapter = adapter
     }
 
     fun recyclerviewCard(view: View){
 
-        val layoutManager = PreCachingLinearLayoutManeger(context)
+        val layoutManager = PreCachingLinearLayoutManeger(context!!)
         //layoutManager.orientation = LinearLayoutManager.HORIZONTAL
         layoutManager.orientation = LinearLayoutManager.VERTICAL
 
-        layoutManager.extraLayoutSpace = DeviceUtils(context).getScreenHeight()
+        layoutManager.extraLayoutSpace = DeviceUtils(context!!).getScreenHeight()
         layoutManager.reverseLayout = true
         view.program_main_card_recyclerview.layoutManager = layoutManager
         view.program_main_card_recyclerview.setHasFixedSize(true)
@@ -97,12 +97,12 @@ class MainBottomFragment : Fragment() {
         view.program_main_card_recyclerview.overScrollMode = View.OVER_SCROLL_NEVER
         view.program_main_card_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
-        val data: ArrayList<ProgramData> = DataStringTools(context).programData(R.array.menu_menu_title_text
+        val data: ArrayList<ProgramData> = DataStringTools(context!!).programData(R.array.menu_menu_title_text
                 , R.array.menu_menu_title_circle
                 ,R.array.induction_program_text_data
                 ,R.array.induction_program_image_data
                 ,R.drawable.unknown_picture)
-        val adapter = ProgramAdapter(data, context,1)
+        val adapter = ProgramAdapter(data, context!!,1)
         view.program_main_card_recyclerview.adapter = adapter
 
         //val helper = LinearSnapHelper()

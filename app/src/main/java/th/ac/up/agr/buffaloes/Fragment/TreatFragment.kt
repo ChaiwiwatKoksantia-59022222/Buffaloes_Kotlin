@@ -35,16 +35,16 @@ class TreatFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater!!.inflate(R.layout.fragment_treat, container, false)
 
-        val title = arguments.getString("TITLE")
+        val title = arguments?.getString("TITLE")
         view.treat_title_name.text = title
 
-        val layoutManager = PreCachingLinearLayoutManeger(context)
+        val layoutManager = PreCachingLinearLayoutManeger(context!!)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
-        layoutManager.extraLayoutSpace = DeviceUtils(context).getScreenHeight()
+        layoutManager.extraLayoutSpace = DeviceUtils(context!!).getScreenHeight()
         layoutManager.reverseLayout = false
         view.treat_recyclerview.layoutManager = layoutManager
         view.treat_recyclerview.setHasFixedSize(true)
@@ -53,10 +53,10 @@ class TreatFragment : Fragment() {
         view.treat_recyclerview.overScrollMode = View.OVER_SCROLL_NEVER
         view.treat_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
-        val data: ArrayList<TreatData> = DataStringTools(context).treatData(R.array.treat_title_text
+        val data: ArrayList<TreatData> = DataStringTools(context!!).treatData(R.array.treat_title_text
                 , R.array.treat_des_text)
 
-        val adapter = TreatAdapter(data,context)
+        val adapter = TreatAdapter(data,context!!)
         view.treat_recyclerview.adapter = adapter
 
         return view

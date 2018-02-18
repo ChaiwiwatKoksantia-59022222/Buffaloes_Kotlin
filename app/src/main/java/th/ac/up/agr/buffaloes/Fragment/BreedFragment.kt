@@ -36,11 +36,11 @@ class BreedFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater!!.inflate(R.layout.fragment_breed, container, false)
 
-        val title = arguments.getString("TITLE")
+        val title = arguments?.getString("TITLE")
         view.breed_title_name.text = title
 
         showHide(view, false)
@@ -56,9 +56,9 @@ class BreedFragment : Fragment() {
             }
         }
 
-        val layoutManager = PreCachingLinearLayoutManeger(context)
+        val layoutManager = PreCachingLinearLayoutManeger(context!!)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
-        layoutManager.extraLayoutSpace = DeviceUtils(context).getScreenHeight()
+        layoutManager.extraLayoutSpace = DeviceUtils(context!!).getScreenHeight()
         layoutManager.reverseLayout = false
         view.breed_recyclerview.layoutManager = layoutManager
         view.breed_recyclerview.setHasFixedSize(true)
@@ -67,10 +67,10 @@ class BreedFragment : Fragment() {
         view.breed_recyclerview.overScrollMode = View.OVER_SCROLL_NEVER
         view.breed_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
-        val data: ArrayList<BreedData> = DataStringTools(context).breedData(R.array.breed_title_text
+        val data: ArrayList<BreedData> = DataStringTools(context!!).breedData(R.array.breed_title_text
                 , R.array.breed_des_text, R.array.breed_image, R.drawable.unknown_picture)
 
-        val adapter = BreedAdapter(data, context)
+        val adapter = BreedAdapter(data, context!!)
         view.breed_recyclerview.adapter = adapter
 
         return view

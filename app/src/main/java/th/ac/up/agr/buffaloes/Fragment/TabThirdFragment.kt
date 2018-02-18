@@ -26,7 +26,7 @@ class TabThirdFragment : Fragment() {
 
     var showDetail :Boolean = true
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         view = inflater!!.inflate(R.layout.fragment_tab_third, container, false)
 
@@ -38,9 +38,9 @@ class TabThirdFragment : Fragment() {
             showHideMore()
         }
 
-        val layoutManager = PreCachingGridLayoutManeger(context,2)
+        val layoutManager = PreCachingGridLayoutManeger(context!!,2)
         layoutManager.orientation = GridLayoutManager.VERTICAL
-        layoutManager.extraLayoutSpace = DeviceUtils(context).getScreenHeight()
+        layoutManager.extraLayoutSpace = DeviceUtils(context!!).getScreenHeight()
         layoutManager.reverseLayout = false
         view.tab3_recyclerview.layoutManager = layoutManager
         view.tab3_recyclerview.setHasFixedSize(true)
@@ -50,11 +50,11 @@ class TabThirdFragment : Fragment() {
         view.tab3_recyclerview.overScrollMode = View.OVER_SCROLL_NEVER
         view.tab3_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
-        val data: ArrayList<TabFifthListData> = DataStringTools(context).tab5MenuData(R.array.tab3Text
+        val data: ArrayList<TabFifthListData> = DataStringTools(context!!).tab5MenuData(R.array.tab3Text
                 , R.array.tab3Image
                 , R.drawable.unknown_picture)
 
-        val adapter = TabFifthAdapter(data, context,3)
+        val adapter = TabFifthAdapter(data, context!!,3)
         view.tab3_recyclerview.adapter = adapter
 
         return view

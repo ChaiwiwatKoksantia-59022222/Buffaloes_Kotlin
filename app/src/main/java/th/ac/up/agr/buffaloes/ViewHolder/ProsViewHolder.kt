@@ -10,5 +10,7 @@ class ProsViewHolder(itemView :View) : RecyclerView.ViewHolder(itemView){
 
     val title = itemView.card_date_title
     val layout = itemView.card_date_title_layout
+    val layoutColor = layout.cardBackgroundColor
+
 
 }

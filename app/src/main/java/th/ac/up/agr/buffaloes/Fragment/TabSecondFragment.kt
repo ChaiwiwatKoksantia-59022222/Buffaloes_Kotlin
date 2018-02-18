@@ -25,7 +25,7 @@ class TabSecondFragment : Fragment() {
 
     private var showDetail: Boolean = true
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         view = inflater!!.inflate(R.layout.fragment_tab_second, container, false)
         setShortText(view.tab_2_detail_short)
@@ -38,9 +38,9 @@ class TabSecondFragment : Fragment() {
 
         //view.tab2_recyclerview.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
-        val layoutManager = PreCachingLinearLayoutManeger(context)
+        val layoutManager = PreCachingLinearLayoutManeger(context!!)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
-        layoutManager.extraLayoutSpace = DeviceUtils(context).getScreenHeight()
+        layoutManager.extraLayoutSpace = DeviceUtils(context!!).getScreenHeight()
         layoutManager.reverseLayout = false
         view.tab2_recyclerview.layoutManager = layoutManager
         view.tab2_recyclerview.setHasFixedSize(true)
@@ -49,12 +49,12 @@ class TabSecondFragment : Fragment() {
         view.tab2_recyclerview.isNestedScrollingEnabled = true
         view.tab2_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
-        val data: ArrayList<TabSecondListData> = DataStringTools(context).tab2Data(R.array.behavior_text_data
+        val data: ArrayList<TabSecondListData> = DataStringTools(context!!).tab2Data(R.array.behavior_text_data
                 , R.array.behavior_text_data_des
                 , R.array.behavior_image_data
                 , R.drawable.unknown_picture)
 
-        val adapter = TabSecondAdapter(data, context)
+        val adapter = TabSecondAdapter(data, context!!)
         view.tab2_recyclerview.adapter = adapter
 
         return view

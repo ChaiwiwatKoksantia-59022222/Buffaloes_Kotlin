@@ -23,7 +23,7 @@ class MainTopFragment : Fragment() {
     private var dateCurrent = Calendar.getInstance()
 
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
         val view = inflater!!.inflate(R.layout.fragment_main_top, container, false)
@@ -41,7 +41,7 @@ class MainTopFragment : Fragment() {
         intent.putExtra("DAY",date.get(Calendar.DAY_OF_MONTH))
         intent.putExtra("MONTH",date.get(Calendar.MONTH))
         intent.putExtra("YEAR",date.get(Calendar.YEAR))
-        context.startActivity(intent)
+        context!!.startActivity(intent)
     }
 
     var dateS: DatePickerDialog.OnDateSetListener = DatePickerDialog.OnDateSetListener { _, year, month, day ->

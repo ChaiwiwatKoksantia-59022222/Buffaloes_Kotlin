@@ -54,15 +54,15 @@ class ProsFragment : Fragment() {
 
     private var show :Boolean = false
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         view = inflater!!.inflate(R.layout.fragment_pros, container, false)
 
-        val title = arguments.getString("TITLE")
-        val subTitle = arguments.getString("SUB")
-        val description = arguments.getString("DES")
-        val image = arguments.getInt("IMAGE")
-        val id = arguments.getInt("ID")
+        val title = arguments?.getString("TITLE")
+        val subTitle = arguments?.getString("SUB")
+        val description = arguments?.getString("DES")
+        val image = arguments?.getInt("IMAGE")
+        val id = arguments?.getInt("ID")
 
         showHide(false)
 
@@ -72,7 +72,7 @@ class ProsFragment : Fragment() {
 
         val option = BitmapFactory.Options()
         option.inSampleSize = 0
-        val bitmap = BitmapFactory.decodeResource(context.resources, image, option)
+        val bitmap = BitmapFactory.decodeResource(context!!.resources, image!!, option)
         view.pros_card_image.setImageBitmap(bitmap)
 
         view.pros_date_button.setOnClickListener {
@@ -184,7 +184,7 @@ class ProsFragment : Fragment() {
     }
 
     fun recycler(){
-        val layoutManager = PreCachingLinearLayoutManeger(context)
+        val layoutManager = PreCachingLinearLayoutManeger(context!!)
         //layoutManager.orientation = LinearLayoutManager.HORIZONTAL
         layoutManager.orientation = LinearLayoutManager.VERTICAL
 
@@ -198,14 +198,14 @@ class ProsFragment : Fragment() {
         view.pros_main_card_recyclerview.overScrollMode = View.OVER_SCROLL_NEVER
         view.pros_main_card_recyclerview.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
 
-        val ID = arguments.getInt("ID")
+        val ID = arguments?.getInt("ID")
 
-        var data = da(ID)
+        var data = da(ID!!)
 
         val dats = ResultString(ID).textS(data,0)
         val date = ResultString(ID).textS(data,1)
 
-        val adapter = ProsAdapter(dats,date, context)
+        val adapter = ProsAdapter(dats,date, context!!)
         view.pros_main_card_recyclerview.adapter = adapter
     }
 

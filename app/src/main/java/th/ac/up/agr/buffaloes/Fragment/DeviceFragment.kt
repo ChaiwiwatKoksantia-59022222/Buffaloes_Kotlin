@@ -35,20 +35,20 @@ class DeviceFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        val view = inflater!!.inflate(R.layout.fragment_device, container, false)
+        val view = inflater.inflate(R.layout.fragment_device, container, false)
 
-        val title = arguments.getString("TITLE")
-        val subTitle = arguments.getString("SUB")
-        val ID = arguments.getInt("ID")
+        val title = arguments?.getString("TITLE")
+        val subTitle = arguments?.getString("SUB")
+        val ID = arguments?.getInt("ID")
         view.device_title_name.text = title
         view.device_name_sub.text = subTitle
 
-        val layoutManager = PreCachingLinearLayoutManeger(context)
+        val layoutManager = PreCachingLinearLayoutManeger(context!!)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
-        layoutManager.extraLayoutSpace = DeviceUtils(context).getScreenHeight()
+        layoutManager.extraLayoutSpace = DeviceUtils(context!!).getScreenHeight()
         layoutManager.reverseLayout = false
         view.device_recyclerview.layoutManager = layoutManager
         view.device_recyclerview.setHasFixedSize(true)
@@ -61,23 +61,23 @@ class DeviceFragment : Fragment() {
 
         when (ID) {
             31 -> {
-                data = DataStringTools(context).DeviceData(R.array.induction_equipment_text_data
+                data = DataStringTools(context!!).DeviceData(R.array.induction_equipment_text_data
                         , R.array.induction_equipment_image_data
                         , R.drawable.unknown_picture,R.array.induction_equipment_description)
             }
             40 -> {
-                data = DataStringTools(context).DeviceData(R.array.artificial_insemination_short_method_text_data
+                data = DataStringTools(context!!).DeviceData(R.array.artificial_insemination_short_method_text_data
                         , R.array.artificial_insemination_method_image_data
                         , R.drawable.unknown_picture,R.array.artificial_insemination_equipment_description)
             }
             42 -> {
-                data = DataStringTools(context).DeviceData(R.array.artificial_insemination_equipment_text_data
+                data = DataStringTools(context!!).DeviceData(R.array.artificial_insemination_equipment_text_data
                         , R.array.artificial_insemination_image_data
                         , R.drawable.unknown_picture,R.array.artificial_insemination_equipment_description)
             }
         }
 
-        val adapter = DeviceAdapter(data, context)
+        val adapter = DeviceAdapter(data, context!!)
         view.device_recyclerview.adapter = adapter
 
         return view
