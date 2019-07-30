@@ -1,5 +1,5 @@
 # Buffaloes
-[![logo.png](https://lh3.googleusercontent.com/QOlig6dRoUT0unsLDpGZAc1HXKx0IkFpIEzhyusvHvVH6WfRtWbKNv-sZKud4wMKLQ=s360)
+![logo.png](https://lh3.googleusercontent.com/QOlig6dRoUT0unsLDpGZAc1HXKx0IkFpIEzhyusvHvVH6WfRtWbKNv-sZKud4wMKLQ=s360)
 
 **Buffaloes** or **Buffaloes Estrus Detection Organizer** is an application that facilitates the calculation of pregnancy and compares the different programs of infertility in buffaloes
 
