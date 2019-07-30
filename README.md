@@ -13,16 +13,9 @@
 - Show the example pictures of estrus in buffalo
 
 ## Download and Installing
-### APK Download Link
-
-[Download](http://www.mediafire.com/file/adp0gavziyydyhw/Buffaloes.apk)
-
-Link update at 3 Dec 2017
-
 ### Google Play Store
-```
-Coming Soon
-```
+[Download](https://play.google.com/store/apps/details?id=th.ac.up.agr.buffaloes)
+
 
 ## Development
 [![DADI0_KBXc_AA-_WWA.jpg](https://s17.postimg.org/58n9b5gsf/DADI0_KBXc_AA-_WWA.jpg)](https://postimg.org/image/70g862057/)
