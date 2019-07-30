@@ -18,7 +18,7 @@
 
 
 ## Development
-[![DADI0_KBXc_AA-_WWA.jpg](https://s17.postimg.org/58n9b5gsf/DADI0_KBXc_AA-_WWA.jpg)](https://postimg.org/image/70g862057/)
+![alt text](https://www.exaud.com/wp-content/uploads/2017/06/Android-Now-Oficially-Supports-Kotlin-Programming-Language.jpeg)
 
 This application was developed **based on Kotlin**, the latest programming language. And is a language Google accepts as the first class language of Android
 
